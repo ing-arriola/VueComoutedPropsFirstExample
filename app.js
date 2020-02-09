@@ -13,6 +13,16 @@ new Vue({
                 return this.secondCounter>5 ? 'Greater':'Smaller than 5'
          }
     },
+    watch:{//When we use properties related with asyncronus code then a computed propertie is not the 
+        //Rigth answer ...instead of it, we must use watch
+        counter:function(){
+            var vueInstance=this
+            setTimeout(() => {
+                vueInstance.counter=0
+            }, 3000);
+        }
+    }
+    ,
     methods:{
         //This method has a problem wich is .... this is executed every time that one propertie is changed
         //it could be a problem if the method is really big and it takes a considerable amount of time
