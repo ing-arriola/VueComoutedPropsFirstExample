@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="exercise">
+    <button v-on:click="counter++">Increase</button>
+    <button v-on:click="counter--">Increase</button>
+    <button v-on:click="secondCounter++">Second</button>
+
+    <p>First counter Value is: {{counter}}</p>
+   
+    <p>{{ result() }}</p>
+
+    <p>Second counter Value is: {{secondCounter}}</p>
+
+    <p>{{secondResult}}</p>
+
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="app.js"></script>
+</body>
+</html>
